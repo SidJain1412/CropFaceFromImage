@@ -1,5 +1,5 @@
 # CropFaceFromImage
-Finds faces in images and displays them in the notebook
+Finds multiple faces in images and saves them in the folder. 
 
 Requirements:
 cv2 and
