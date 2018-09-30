@@ -7,10 +7,11 @@ class CropFace:
         self.imagepath = imagepath
 
     def cropimages(self):
-        image = cv2.imread(self.imagepath, 0)
+        image = cv2.imread(self.imagepath)
+        image_gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
         face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_alt.xml')
         faces = face_cascade.detectMultiScale(
-            image, scaleFactor=1.3, minNeighbors=5)
+            image_gray, scaleFactor=1.3, minNeighbors=5)
 
         faces_found = []
 
